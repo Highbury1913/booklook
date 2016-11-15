@@ -1,26 +1,64 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="node_modules\bootstrap\dist\css\bootstrap.css">
-<link rel="stylesheet" type="text/css" href="node_modules\font-awesome\css\font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="node_modules\bootstrap\dist\css\bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="node_modules\font-awesome\css\font-awesome.css">
 <head>
-	<title>BookLook</title>
+	   <title>BookLook</title>
+     <script src="node_modules/handlebars/dist/handlebars.js"></script>
 </head>
-<body>
-<section class="page-header">
-	<h1> BookLook <i class="fa fa-eye" aria-hidden="true"></i></h1>	
-</section>
 
-<section class= "newBook">	
-</section>>
+<body>
+  <div class="container">
+  <div class="row">
+  
+    <section class="page-header">
+	     <h1> BookLook <i class="fa fa-eye" aria-hidden="true"></i></h1>	
+    </section>
+
+<div class= "newBook">	</div>
 
 	<form>
-  <div class="page-header">
-    <label for="bookInfo"><h3>Enter Book Info</h3></label></div>
-    <div class ="form-group">
-    <input type="text" class="form-control" id="theTitle" placeholder="Title">
-  </div>
-  <div class="form-group">
+      <div class="page-header">
+          <label for="bookInfo"><h3>Enter Book Info</h3></label></div>
+          <div class ="form-group">
+          <input type="text" class="form-control" id="ISBN-Number" placeholder="ISBN-Number">
+      </div>
+  <!--***********-->
+    <button type="button" class="btn btn-primary search">Search</button>
+  </form>
+
+<script id="book-template" type="text/x-handlebars-template">
+<div>
+  {{#each books}}
+  	  <h1>{{title}}</h1>
+      <h3> {{authors}}</h3> 
+  	  <div>{{description}}</div>
+  	  <img src="{{image}}">
+      <div>{{pageCount}}</div>
+  {{/each}}    
+</div>    
+</script>
+
+<script type="text/javascript"></script> 
+<script src="node_modules/jquery/dist/jquery.min.js"> </script>
+<script src="script.js"></script>
+</body>
+</html>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--************ <div class="form-group">
     <input type="text" class="form-control" id="theAuthor" placeholder="Book Author">
   </div>
    <div class="form-group">
@@ -34,18 +72,4 @@
   </div>
   <div class="form-group">
     <input type="text" class="form-control" id="minutesPerDay" placeholder="Minutes You Read Per Day">
-  </div>
-  <button type="button" class="btn btn-primary search">Search</button>
-</form>
-<script id="book-template" type="text/x-handlebars-template">
-	<div> {{author}}</div>
-	<div>{{title}}</div>
-	<div>{{description}}</div>
-	<div>{{image}}</div>
-</script>
-<script type="text/javascript"></script>
-<script src="node_modules/jquery/dist/jquery.min.js"> </script>
-
-<script src="script.js"></script>
-</body>
-</html>
+  </div>-->
