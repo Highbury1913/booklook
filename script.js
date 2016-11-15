@@ -3,7 +3,7 @@
 
 
 
-$('.search').on('click',function () {
+/*$('.search').on('click',function () {
 	var fetch = function () {
   	$.ajax({
 	    method: "GET",
@@ -24,7 +24,7 @@ $('.search').on('click',function () {
 		    $('.newBook').append(newHtml);
 
 /*debugger;*/ 
-		     console.log(data.items[0].volumeInfo.title);
+		    /* console.log(data.items[0].volumeInfo.title);
 		     console.log(data.items[0].volumeInfo.authors[0]);
 		     console.log(data.items[0].volumeInfo.description);
 		     console.log(data.items[0].volumeInfo.imageLinks.smallThumbnail);
