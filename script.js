@@ -13,7 +13,7 @@ var createNewBook = function (){
     //push obj to books
     books.push(book);
 
-    //console.log(books);---TEST
+    //console.log(books);---TEST to see if works
 }
 
 var appendBooks = function(){
